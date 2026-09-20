@@ -15,13 +15,8 @@ import kitchenBarBakeryPdf from "@/assets/kitchen-bar-bakery-accessories.pdf.ass
 import knifeKitchenPdf from "@/assets/knife-and-kitchen-accessories.pdf.asset.json";
 import tableTopMachineryPdf from "@/assets/table-top-machinery-accessories.pdf.asset.json";
 import woodenBuffetwarePdf from "@/assets/wooden-buffetware-accessories-raiser.pdf.asset.json";
-import organicCatalogCover from "@/assets/organic-series-crockery-thumbnail.png.asset.json";
-import colouredCatalogCover from "@/assets/coloured-crockery-thumbnail.png.asset.json";
-import tablewareCatalogCover from "@/assets/tableware-crockery-thumbnail.png.asset.json";
-import bakeryAccessoriesCatalogCover from "@/assets/catalog-bakery-accessories.jpg.asset.json";
-import bakeryToolsCatalogCover from "@/assets/catalog-bakery-tools.png.asset.json";
-import mixologyGlasswareCover from "@/assets/bhilva-mixology-glassware-thumbnail.png.asset.json";
-import regularGlasswareCover from "@/assets/bhilva-regular-glassware-thumbnail.png.asset.json";
+
+// Local image assets
 import crockeryCover from "@/assets/cat-crockery.jpg";
 import crockeryCatalogCover from "@/assets/cat-crockery-cover.jpg";
 import glasswareCover from "@/assets/cat-glassware.jpg";
@@ -43,7 +38,18 @@ export type Catalog = {
   fileName: string;
   cover: string;
   pages?: number;
-  category: "crockery" | "glassware" | "bakery" | "chafing" | "cutlery" | "gn-pans" | "pots-pans" | "kitchen-bar-bakery" | "knife-kitchen-accessories" | "table-top-machinery" | "wooden-buffetware";
+  category:
+    | "crockery"
+    | "glassware"
+    | "bakery"
+    | "chafing"
+    | "cutlery"
+    | "gn-pans"
+    | "pots-pans"
+    | "kitchen-bar-bakery"
+    | "knife-kitchen-accessories"
+    | "table-top-machinery"
+    | "wooden-buffetware";
 };
 
 export const CATALOGS: Catalog[] = [
@@ -58,6 +64,7 @@ export const CATALOGS: Catalog[] = [
     pages: 20,
     category: "cutlery",
   },
+
   {
     slug: "crockery",
     name: "Crockery Catalog",
@@ -69,6 +76,7 @@ export const CATALOGS: Catalog[] = [
     pages: 45,
     category: "crockery",
   },
+
   {
     slug: "organic-series-crockery",
     name: "Organic Series Crockery",
@@ -76,10 +84,15 @@ export const CATALOGS: Catalog[] = [
       "Organic-inspired crockery series with natural textures and finishes for premium dining.",
     file: organicPdf.url,
     fileName: "organic-series-crockery.pdf",
-    cover: organicCatalogCover.url,
+
+    // Using verified local image
+    // because the original thumbnail asset is not present locally.
+    cover: crockeryCatalogCover,
+
     pages: 19,
     category: "crockery",
   },
+
   {
     slug: "coloured-crockery",
     name: "Coloured Crockery — 10 Colors",
@@ -87,10 +100,15 @@ export const CATALOGS: Catalog[] = [
       "Crockery collections available in ten colourways for restaurants, cafes and catering.",
     file: colouredPdf.url,
     fileName: "coloured-crockery-10-colors.pdf",
-    cover: colouredCatalogCover.url,
+
+    // Using verified local image
+    // because the original thumbnail asset is not present locally.
+    cover: crockeryCatalogCover,
+
     pages: 62,
     category: "crockery",
   },
+
   {
     slug: "tableware-crockery",
     name: "Tableware Crockery",
@@ -98,10 +116,14 @@ export const CATALOGS: Catalog[] = [
       "Complete tableware and crockery ranges for hotels, banquets and everyday service.",
     file: tablewarePdf.url,
     fileName: "tableware-crockery.pdf",
-    cover: tablewareCatalogCover.url,
+
+    // Local crockery image
+    cover: crockeryCover,
+
     pages: 29,
     category: "crockery",
   },
+
   {
     slug: "cocktail-glassware",
     name: "Cocktail & Mocktail Glassware",
@@ -113,6 +135,7 @@ export const CATALOGS: Catalog[] = [
     pages: 44,
     category: "glassware",
   },
+
   {
     slug: "bhilva-mixology-glassware",
     name: "Bhilva Mixology Glassware",
@@ -120,10 +143,11 @@ export const CATALOGS: Catalog[] = [
       "Specialist mixology glassware for cocktails, creative beverage presentation and professional bar service.",
     file: mixologyGlasswarePdf.url,
     fileName: "bhilva-mixology-glassware.pdf",
-    cover: mixologyGlasswareCover.url,
+    cover: glasswareCover,
     pages: 47,
     category: "glassware",
   },
+
   {
     slug: "bhilva-regular-glassware",
     name: "Bhilva Regular Glassware",
@@ -131,10 +155,11 @@ export const CATALOGS: Catalog[] = [
       "Everyday glassware collections for restaurants, hotels, catering and beverage service.",
     file: regularGlasswarePdf.url,
     fileName: "bhilva-regular-glassware.pdf",
-    cover: regularGlasswareCover.url,
+    cover: glasswareCover,
     pages: 20,
     category: "glassware",
   },
+
   {
     slug: "bakery",
     name: "Bakery Catalog",
@@ -142,10 +167,11 @@ export const CATALOGS: Catalog[] = [
       "Bakery supplies, tools and equipment for commercial bakeries, cafes and patisseries.",
     file: bakeryPdf.url,
     fileName: "BHILVA_BAKERY_compressed.pdf",
-    cover: bakeryToolsCatalogCover.url,
+    cover: bakeryCover,
     pages: 26,
     category: "bakery",
   },
+
   {
     slug: "bakery-accessories",
     name: "Bakery Accessories Catalog",
@@ -157,6 +183,7 @@ export const CATALOGS: Catalog[] = [
     pages: 10,
     category: "bakery",
   },
+
   {
     slug: "chaf-dish",
     name: "Chafing Dish Catalog",
@@ -168,6 +195,7 @@ export const CATALOGS: Catalog[] = [
     pages: 14,
     category: "chafing",
   },
+
   {
     slug: "gn-pans-and-lids",
     name: "GN Pans & Lids Catalog",
@@ -179,6 +207,7 @@ export const CATALOGS: Catalog[] = [
     pages: 6,
     category: "gn-pans",
   },
+
   {
     slug: "pots-and-pans",
     name: "Pots & Pans Catalog",
@@ -190,6 +219,7 @@ export const CATALOGS: Catalog[] = [
     pages: 14,
     category: "pots-pans",
   },
+
   {
     slug: "kitchen-bar-bakery-accessories",
     name: "Kitchen, Bar & Bakery Accessories Catalog",
@@ -201,6 +231,7 @@ export const CATALOGS: Catalog[] = [
     pages: 136,
     category: "kitchen-bar-bakery",
   },
+
   {
     slug: "knife-and-kitchen-accessories",
     name: "Knife & Kitchen Accessories Catalog",
@@ -212,6 +243,7 @@ export const CATALOGS: Catalog[] = [
     pages: 71,
     category: "knife-kitchen-accessories",
   },
+
   {
     slug: "table-top-machinery-accessories",
     name: "Table Top Machinery & Accessories Catalog",
@@ -223,6 +255,7 @@ export const CATALOGS: Catalog[] = [
     pages: 27,
     category: "table-top-machinery",
   },
+
   {
     slug: "wooden-buffetware-accessories-raiser",
     name: "Wooden Buffetware Accessories Raiser Catalog",
