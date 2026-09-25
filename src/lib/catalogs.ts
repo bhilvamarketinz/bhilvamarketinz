@@ -15,6 +15,12 @@ import kitchenBarBakeryPdf from "@/assets/kitchen-bar-bakery-accessories.pdf.ass
 import knifeKitchenPdf from "@/assets/knife-and-kitchen-accessories.pdf.asset.json";
 import tableTopMachineryPdf from "@/assets/table-top-machinery-accessories.pdf.asset.json";
 import woodenBuffetwarePdf from "@/assets/wooden-buffetware-accessories-raiser.pdf.asset.json";
+import organicCatalogCover from "@/assets/organic-series-crockery-thumbnail.png.asset.json";
+import colouredCatalogCover from "@/assets/coloured-crockery-thumbnail.png.asset.json";
+import tablewareCatalogCover from "@/assets/tableware-crockery-thumbnail.png.asset.json";
+import bakeryAccessoriesCatalogCover from "@/assets/catalog-bakery-tools.png.asset.json";
+import mixologyGlasswareCover from "@/assets/bhilva-mixology-glassware-thumbnail.png.asset.json";
+import regularGlasswareCover from "@/assets/bhilva-regular-glassware-thumbnail.png.asset.json";
 
 // Local image assets
 import crockeryCover from "@/assets/cat-crockery.jpg";
@@ -85,9 +91,7 @@ export const CATALOGS: Catalog[] = [
     file: organicPdf.url,
     fileName: "organic-series-crockery.pdf",
 
-    // Using verified local image
-    // because the original thumbnail asset is not present locally.
-    cover: crockeryCatalogCover,
+    cover: organicCatalogCover.url,
 
     pages: 19,
     category: "crockery",
@@ -101,9 +105,7 @@ export const CATALOGS: Catalog[] = [
     file: colouredPdf.url,
     fileName: "coloured-crockery-10-colors.pdf",
 
-    // Using verified local image
-    // because the original thumbnail asset is not present locally.
-    cover: crockeryCatalogCover,
+    cover: colouredCatalogCover.url,
 
     pages: 62,
     category: "crockery",
@@ -117,8 +119,7 @@ export const CATALOGS: Catalog[] = [
     file: tablewarePdf.url,
     fileName: "tableware-crockery.pdf",
 
-    // Local crockery image
-    cover: crockeryCover,
+    cover: tablewareCatalogCover.url,
 
     pages: 29,
     category: "crockery",
@@ -143,7 +144,7 @@ export const CATALOGS: Catalog[] = [
       "Specialist mixology glassware for cocktails, creative beverage presentation and professional bar service.",
     file: mixologyGlasswarePdf.url,
     fileName: "bhilva-mixology-glassware.pdf",
-    cover: glasswareCover,
+    cover: mixologyGlasswareCover.url,
     pages: 47,
     category: "glassware",
   },
@@ -155,7 +156,7 @@ export const CATALOGS: Catalog[] = [
       "Everyday glassware collections for restaurants, hotels, catering and beverage service.",
     file: regularGlasswarePdf.url,
     fileName: "bhilva-regular-glassware.pdf",
-    cover: glasswareCover,
+    cover: regularGlasswareCover.url,
     pages: 20,
     category: "glassware",
   },
@@ -179,7 +180,7 @@ export const CATALOGS: Catalog[] = [
       "Specialist bakery accessories and service items for professional baking operations.",
     file: bakeryAccessoriesPdf.url,
     fileName: "BHILVA_BAKERY_ACCESSORIES.pdf",
-    cover: bakeryCover,
+    cover: bakeryAccessoriesCatalogCover.url,
     pages: 10,
     category: "bakery",
   },
