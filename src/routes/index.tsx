@@ -16,6 +16,7 @@ import {
 } from "@/components/sections";
 import { useInquiry } from "@/components/inquiry";
 import { BRAND, CATEGORIES, CONTACT } from "@/lib/site";
+import premisesImage from "@/assets/bhilva-premises-home.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -179,8 +180,8 @@ function AboutPreview() {
       <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-2">
         <div className="relative">
           <MaskedImage
-            src={CATEGORIES[2]!.image}
-            alt="Crockery and tableware supplied for hospitality businesses"
+            src={premisesImage.url}
+            alt="Bhilva Marketinz premises"
             width={1200}
             height={900}
             className="aspect-4/5 rounded-xl"

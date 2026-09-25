@@ -9,3 +9,4 @@
 - [x] Add shashikodase@bhilvam.in as the EmailJS contact-form recipient
 - [x] Prevent the opening logo screen from getting stuck in a new tab
 - [x] Verify and prepare the website for Netlify deployment
+- [x] Replace the homepage About section crockery image with the supplied premises photo
