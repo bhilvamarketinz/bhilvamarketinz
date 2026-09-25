@@ -7,3 +7,4 @@
 - [x] Add EmailJS contact-form test mode with exact payload and delivery status
 - [x] Assign distinct name-matched thumbnails to crockery, bakery, and glassware catalogs
 - [x] Add shashikodase@bhilvam.in as the EmailJS contact-form recipient
+- [x] Prevent the opening logo screen from getting stuck in a new tab

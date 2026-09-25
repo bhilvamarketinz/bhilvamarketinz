@@ -15,7 +15,6 @@ import { InquiryProvider } from "@/components/inquiry";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { MobileActionBar } from "@/components/mobile-action-bar";
-import { IntroCurtain } from "@/components/intro-curtain";
 import { Toaster } from "@/components/ui/sonner";
 
 
@@ -132,7 +131,6 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       <InquiryProvider>
-        <IntroCurtain />
         <SiteHeader />
         <main className="pb-16 lg:pb-0">
           {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
