@@ -8,10 +8,23 @@ export function IntroCurtain() {
 
   useEffect(() => {
     if (typeof window === "undefined") return;
-    if (window.sessionStorage.getItem("bm-intro") === "seen") return;
+
+    try {
+      if (window.sessionStorage.getItem("bm-intro") === "seen") return;
+    } catch {
+      // Storage can be unavailable when the preview opens in a separate tab.
+      // The intro should still run and, most importantly, always finish.
+    }
+
     setDone(false);
-    window.sessionStorage.setItem("bm-intro", "seen");
     const timer = window.setTimeout(() => setDone(true), 1500);
+
+    try {
+      window.sessionStorage.setItem("bm-intro", "seen");
+    } catch {
+      // A blocked storage write must not leave the curtain covering the page.
+    }
+
     return () => window.clearTimeout(timer);
   }, []);
 
