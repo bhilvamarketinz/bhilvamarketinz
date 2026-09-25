@@ -23,6 +23,8 @@ import {
 } from "@/lib/spam-guard";
 
 type ContactEmailPayload = {
+  to_email: string;
+  reply_to: string;
   subject: string;
   name: string;
   phone: string;
@@ -50,6 +52,8 @@ function createEmailPayload(data: FormData): ContactEmailPayload {
   ].join("\n");
 
   return {
+    to_email: CONTACT.email,
+    reply_to: email || CONTACT.email,
     subject: "New contact message — Bhilva Marketinz",
     name,
     phone,
@@ -76,7 +80,7 @@ export const Route = createFileRoute("/contact")({
       {
         name: "description",
         content:
-          "Contact Bhilva Marketinz for kitchenware and hospitality product inquiries. Call 97403 68339, WhatsApp 9964335352 or email trendinfkix@gmail.com.",
+          `Contact Bhilva Marketinz for kitchenware and hospitality product inquiries. Call ${CONTACT.phone}, WhatsApp ${CONTACT.whatsapp} or email ${CONTACT.email}.`,
       },
       { property: "og:title", content: "Contact Bhilva Marketinz" },
       {
