@@ -9,7 +9,7 @@ import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 export default defineConfig({
   // Netlify identifies its own builds with NETLIFY=true. Keep Lovable's native
   // deployment target everywhere else so editor and separate-tab previews work.
-  ...(process.env.NETLIFY === "true" ? { nitro: { preset: "netlify" } } : {}),
+  ...(process.env["NETLIFY"] === "true" ? { nitro: { preset: "netlify" } } : {}),
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
