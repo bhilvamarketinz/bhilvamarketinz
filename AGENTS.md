@@ -8,3 +8,5 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Select the Netlify Nitro preset only when `NETLIFY=true`; otherwise retain Lovable's native deployment target so both hosts can render SSR correctly.
