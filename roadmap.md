@@ -10,3 +10,4 @@
 - [x] Prevent the opening logo screen from getting stuck in a new tab
 - [x] Verify and prepare the website for Netlify deployment
 - [x] Replace the homepage About section crockery image with the supplied premises photo
+- [x] Restore separate-tab preview compatibility while retaining Netlify deployment support
