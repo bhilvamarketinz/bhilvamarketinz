@@ -10,3 +10,4 @@
 <!-- LOVABLE:END -->
 
 - Select the Netlify Nitro preset only when `NETLIFY=true`; otherwise retain Lovable's native deployment target so both hosts can render SSR correctly.
+- Explicitly prerender every visitor-independent public page so refreshes and fresh tabs receive complete HTML immediately.

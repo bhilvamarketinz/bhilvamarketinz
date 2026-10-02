@@ -11,3 +11,4 @@
 - [x] Verify and prepare the website for Netlify deployment
 - [x] Replace the homepage About section crockery image with the supplied premises photo
 - [x] Restore separate-tab preview compatibility while retaining Netlify deployment support
+- [x] Pre-render all public pages and remove first-load animation delays
