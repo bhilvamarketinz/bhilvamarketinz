@@ -1,5 +1,4 @@
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
-import { AnimatePresence, motion } from "motion/react";
 import { useState } from "react";
 import { z } from "zod";
 import { MessageCircle, Phone, ZoomIn } from "lucide-react";
@@ -181,16 +180,10 @@ function ProductsPage() {
           })}
         </div>
 
-        <motion.div layout className="mt-10 grid gap-6 md:grid-cols-2">
-          <AnimatePresence mode="popLayout">
-            {visible.map((c, i) => (
-              <motion.article
+        <div className="mt-10 grid gap-6 md:grid-cols-2">
+            {visible.map((c) => (
+              <article
                 key={c.slug}
-                layout
-                initial={{ opacity: 0, y: 24 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -12 }}
-                transition={{ duration: 0.55, delay: i * 0.06, ease: [0.22, 1, 0.36, 1] }}
                 className="group overflow-hidden rounded-xl border border-border bg-card"
               >
                 <button
@@ -264,10 +257,9 @@ function ProductsPage() {
                     </Button>
                   </div>
                 </div>
-              </motion.article>
+              </article>
             ))}
-          </AnimatePresence>
-        </motion.div>
+        </div>
 
         <div className="mt-10 rounded-xl border border-dashed border-border p-8 text-center">
           <h2 className="text-xl">More product photographs coming soon</h2>

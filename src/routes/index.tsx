@@ -1,6 +1,4 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { motion, useScroll, useTransform } from "motion/react";
-import { useRef } from "react";
 import { ArrowRight, MessageCircle, Sparkles } from "lucide-react";
 import heroImage from "@/assets/hero-kitchenware.jpg";
 import { Button } from "@/components/ui/button";
@@ -75,14 +73,10 @@ function HomePage() {
 
 function Hero() {
   const { openInquiry } = useInquiry();
-  const ref = useRef<HTMLElement | null>(null);
-  const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
-  const y = useTransform(scrollYProgress, [0, 1], ["0%", "16%"]);
-  const fade = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
 
   return (
-    <section ref={ref} className="relative min-h-[92svh] overflow-hidden bg-charcoal">
-      <motion.div style={{ y }} className="absolute inset-0">
+    <section className="relative min-h-[92svh] overflow-hidden bg-charcoal">
+      <div className="absolute inset-0">
         <img
           src={heroImage}
           alt="Professional cookware, cutlery, crockery and glassware supplied by Bhilva Marketinz"
@@ -93,51 +87,23 @@ function Hero() {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-charcoal via-charcoal/92 to-charcoal/45" />
         <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/35 to-charcoal/70" />
-      </motion.div>
+      </div>
 
-      <motion.div
-        style={{ opacity: fade }}
-        className="relative mx-auto flex min-h-[92svh] max-w-7xl flex-col justify-center px-5 pb-28 pt-28 sm:px-8 lg:pb-24"
-      >
-        <motion.p
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.15 }}
-          className="eyebrow flex items-center gap-2 text-leaf"
-        >
+      <div className="relative mx-auto flex min-h-[92svh] max-w-7xl flex-col justify-center px-5 pb-28 pt-28 sm:px-8 lg:pb-24">
+        <p className="eyebrow flex items-center gap-2 text-leaf">
           <Sparkles className="size-3.5" /> Kitchenware &amp; Hospitality Supply
-        </motion.p>
+        </p>
 
         <h1 className="mt-5 max-w-4xl text-4xl leading-[1.06] text-forest-foreground sm:text-6xl lg:text-7xl">
-          {"Premium Kitchenware & Hospitality Supplies".split(" ").map((word, i) => (
-            <motion.span
-              key={`${word}-${i}`}
-              initial={{ opacity: 0, y: 26 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.25 + i * 0.07, ease: [0.22, 1, 0.36, 1] }}
-              className="mr-[0.28em] inline-block"
-            >
-              {word}
-            </motion.span>
-          ))}
+          Premium Kitchenware &amp; Hospitality Supplies
         </h1>
 
-        <motion.p
-          initial={{ opacity: 0, y: 18 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.65 }}
-          className="mt-6 max-w-xl text-base leading-relaxed text-forest-foreground/72 sm:text-lg"
-        >
+        <p className="mt-6 max-w-xl text-base leading-relaxed text-forest-foreground/72 sm:text-lg">
           Quality products for professional kitchens, restaurants, hotels, hospitality
           businesses, bakeries, bars and commercial requirements.
-        </motion.p>
+        </p>
 
-        <motion.div
-          initial={{ opacity: 0, y: 18 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="mt-9 flex flex-wrap gap-3"
-        >
+        <div className="mt-9 flex flex-wrap gap-3">
           <Button asChild variant="brand" size="xl" className="group">
             <Link to="/products">
               View Products
@@ -155,21 +121,16 @@ function Hero() {
               <MessageCircle /> WhatsApp Inquiry
             </a>
           </Button>
-        </motion.div>
+        </div>
 
-        <motion.ul
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1 }}
-          className="mt-14 flex flex-wrap gap-x-8 gap-y-3 border-t border-forest-foreground/15 pt-6"
-        >
+        <ul className="mt-14 flex flex-wrap gap-x-8 gap-y-3 border-t border-forest-foreground/15 pt-6">
           {CATEGORIES.map((c) => (
             <li key={c.slug} className="eyebrow text-forest-foreground/70">
               {c.name}
             </li>
           ))}
-        </motion.ul>
-      </motion.div>
+        </ul>
+      </div>
     </section>
   );
 }
