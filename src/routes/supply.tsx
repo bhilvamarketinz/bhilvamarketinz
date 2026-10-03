@@ -22,9 +22,10 @@ export const Route = createFileRoute("/supply")({
           "India-wide and international supply of kitchenware and hospitality products.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/supply" },
+      { property: "og:url", content: "https://bhilvamarketinz.lovable.app/supply" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/supply" }],
+    links: [{ rel: "canonical", href: "https://bhilvamarketinz.lovable.app/supply" }],
   }),
   component: SupplyPage,
 });

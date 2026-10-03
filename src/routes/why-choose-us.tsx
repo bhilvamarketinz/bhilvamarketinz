@@ -20,9 +20,10 @@ export const Route = createFileRoute("/why-choose-us")({
           "A supply partner built around professional kitchens, hotels, bakeries and bars.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/why-choose-us" },
+      { property: "og:url", content: "https://bhilvamarketinz.lovable.app/why-choose-us" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/why-choose-us" }],
+    links: [{ rel: "canonical", href: "https://bhilvamarketinz.lovable.app/why-choose-us" }],
   }),
   component: WhyChooseUsPage,
 });

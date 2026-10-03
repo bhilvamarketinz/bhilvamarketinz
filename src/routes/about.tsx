@@ -22,10 +22,11 @@ export const Route = createFileRoute("/about")({
         content:
           "A professional product-supply company for kitchenware, hospitality and commercial product categories.",
       },
-      { property: "og:type", content: "article" },
-      { property: "og:url", content: "/about" },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://bhilvamarketinz.lovable.app/about" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/about" }],
+    links: [{ rel: "canonical", href: "https://bhilvamarketinz.lovable.app/about" }],
   }),
   component: AboutPage,
 });

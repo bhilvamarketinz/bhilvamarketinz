@@ -32,10 +32,10 @@ export const Route = createFileRoute("/")({
           "Quality products for professional kitchens, restaurants, hotels, bakeries, bars and commercial requirements.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/" },
+      { property: "og:url", content: "https://bhilvamarketinz.lovable.app/" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [{ rel: "canonical", href: "https://bhilvamarketinz.lovable.app/" }],
     scripts: [
       {
         type: "application/ld+json",
