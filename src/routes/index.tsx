@@ -14,7 +14,7 @@ import {
 } from "@/components/sections";
 import { useInquiry } from "@/components/inquiry";
 import { BRAND, CATEGORIES, CONTACT } from "@/lib/site";
-import premisesImage from "@/assets/bhilva-premises-home.png.asset.json";
+import productWarehouseImage from "@/assets/bhilva-product-warehouse.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -141,10 +141,10 @@ function AboutPreview() {
       <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-2">
         <div className="relative">
           <MaskedImage
-            src={premisesImage.url}
-            alt="Bhilva Marketinz premises"
-            width={1200}
-            height={900}
+            src={productWarehouseImage}
+            alt="Neatly arranged kitchenware, bakery, cutlery, crockery, glassware and barware in a premium warehouse"
+            width={1600}
+            height={1000}
             className="aspect-4/5 rounded-xl"
           />
           <MaskedImage
