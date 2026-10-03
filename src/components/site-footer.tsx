@@ -4,7 +4,7 @@ import { Instagram, Facebook, Linkedin, Phone, MessageCircle, Mail, MapPin, File
 import { BrandLogo } from "@/components/brand-logo";
 import { Button } from "@/components/ui/button";
 import { useInquiry } from "@/components/inquiry";
-import { requestCatalog } from "@/components/site-header";
+import { requestCatalog } from "@/components/catalog-download-dialog";
 import { BRAND, CATEGORIES, CONTACT, NAV } from "@/lib/site";
 
 export function SiteFooter() {

@@ -6,7 +6,7 @@ import { Reveal, staggerChild, staggerParent } from "@/components/reveal";
 import { useInquiry } from "@/components/inquiry";
 import { CatalogGrid } from "@/components/catalog-grid";
 
-import { requestCatalog } from "@/components/site-header";
+import { requestCatalog } from "@/components/catalog-download-dialog";
 import { CONTACT, WHY_CHOOSE } from "@/lib/site";
 
 export function SectionHeading({
@@ -183,7 +183,7 @@ export function CatalogBand() {
           </div>
           <Button variant="quiet" size="xl" className="group" onClick={requestCatalog}>
             <FileDown className="transition-transform duration-300 group-hover:translate-y-1" />
-            Request a Catalog
+            Download Catalogs
           </Button>
         </div>
 

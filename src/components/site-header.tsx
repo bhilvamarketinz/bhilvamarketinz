@@ -6,15 +6,8 @@ import { Menu, X, FileDown } from "lucide-react";
 import { BrandLogo } from "@/components/brand-logo";
 import { Button } from "@/components/ui/button";
 import { useInquiry } from "@/components/inquiry";
+import { CatalogDownloadDialog, requestCatalog } from "@/components/catalog-download-dialog";
 import { NAV } from "@/lib/site";
-import { toast } from "sonner";
-
-export function requestCatalog() {
-  toast("Product catalog", {
-    description:
-      "The Bhilva Marketinz PDF catalog will be available here shortly. Send an inquiry and we will share it directly.",
-  });
-}
 
 export function SiteHeader() {
   const [scrolled, setScrolled] = useState(false);
@@ -32,6 +25,7 @@ export function SiteHeader() {
   useEffect(() => setOpen(false), [pathname]);
 
   return (
+    <>
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
         scrolled
@@ -71,7 +65,7 @@ export function SiteHeader() {
             className={`group ${scrolled ? "" : "text-forest-foreground hover:bg-forest-foreground/10 hover:text-forest-foreground"}`}
           >
             <FileDown className="transition-transform group-hover:translate-y-0.5" />
-            Catalog
+            Catalogs
           </Button>
           <Button variant="brand" size="sm" onClick={() => openInquiry({ mode: "quote" })}>
             Get a Quote
@@ -144,7 +138,7 @@ export function SiteHeader() {
             </nav>
             <div className="mt-5 grid grid-cols-2 gap-2">
               <Button variant="quiet" onClick={requestCatalog}>
-                <FileDown /> Catalog
+                <FileDown /> Catalogs
               </Button>
               <Button variant="brand" onClick={() => openInquiry({ mode: "quote" })}>
                 Get a Quote
@@ -154,5 +148,7 @@ export function SiteHeader() {
         )}
       </AnimatePresence>
     </header>
+    <CatalogDownloadDialog />
+    </>
   );
 }
