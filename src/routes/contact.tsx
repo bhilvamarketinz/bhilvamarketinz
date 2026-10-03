@@ -88,9 +88,10 @@ export const Route = createFileRoute("/contact")({
         content: "Call, WhatsApp or email us for product inquiries and quotations.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/contact" },
+      { property: "og:url", content: "https://bhilvamarketinz.lovable.app/contact" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/contact" }],
+    links: [{ rel: "canonical", href: "https://bhilvamarketinz.lovable.app/contact" }],
   }),
   component: ContactPage,
 });

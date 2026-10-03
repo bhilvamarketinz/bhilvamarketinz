@@ -39,9 +39,10 @@ export const Route = createFileRoute("/products")({
           "Kitchenware and hospitality products for restaurants, hotels, bakeries and bars.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/products" },
+      { property: "og:url", content: "https://bhilvamarketinz.lovable.app/products" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/products" }],
+    links: [{ rel: "canonical", href: "https://bhilvamarketinz.lovable.app/products" }],
   }),
   component: ProductsPage,
 });
