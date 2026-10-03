@@ -13,3 +13,4 @@
 - [x] Restore separate-tab preview compatibility while retaining Netlify deployment support
 - [x] Pre-render all public pages and remove first-load animation delays
 - [x] Remove the obsolete blank publish shell so the complete static homepage is served
+- [x] Replace the homepage premises photo with a cinematic multi-category warehouse display
