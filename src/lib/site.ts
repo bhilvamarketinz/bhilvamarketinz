@@ -11,13 +11,13 @@ export const CONTACT = {
   phone: "97403 68339",
   phoneHref: "tel:+919740368339",
   whatsapp: "9945212306",
-  whatsappHref: "https://wa.me/919945212306",
+  whatsappHref: "https://web.whatsapp.com/send?phone=919945212306",
   email: "shashikodase@bhilvam.in",
   emailHref: "mailto:shashikodase@bhilvam.in",
 };
 
 export function whatsappLink(message: string) {
-  return `${CONTACT.whatsappHref}?text=${encodeURIComponent(message)}`;
+  return `${CONTACT.whatsappHref}&text=${encodeURIComponent(message)}`;
 }
 
 export const NAV = [
