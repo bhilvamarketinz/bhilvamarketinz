@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Instagram, Facebook, Linkedin, Phone, MessageCircle, Mail, MapPin, FileDown } from "lucide-react";
+import { Instagram, Facebook, Linkedin, Phone, MessageCircle, Mail, MapPin, FileDown, Clock } from "lucide-react";
 
 import { BrandLogo } from "@/components/brand-logo";
 import { Button } from "@/components/ui/button";
@@ -84,6 +84,13 @@ export function SiteFooter() {
           </FooterCol>
 
           <FooterCol title="Contact">
+            <p className="flex items-start gap-2 py-1 text-sm leading-relaxed text-forest-foreground/70">
+              <MapPin className="mt-0.5 size-3.5 shrink-0" />
+              <span>6th Main Road, Kodigehalli, 6th Cross Rd, Balaji Layout, Hebbal, Bengaluru, Karnataka 560094</span>
+            </p>
+            <p className="flex items-center gap-2 py-1 text-sm text-forest-foreground/70">
+              <Clock className="size-3.5 shrink-0" /> Closed · Opens 10:30 am Mon
+            </p>
             <a
               href={CONTACT.phoneHref}
               className="flex items-center gap-2 py-1 text-sm text-forest-foreground/70 transition-colors hover:text-leaf"
