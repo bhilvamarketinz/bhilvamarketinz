@@ -14,7 +14,7 @@ export default defineConfig({
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
     server: { entry: "server" },
-    // These public pages contain no visitor-specific data, so ship ready-rendered HTML.
+    // Pages list kept for later; not used while prerender is disabled.
     pages: [
       { path: "/" },
       { path: "/about" },
@@ -23,8 +23,10 @@ export default defineConfig({
       { path: "/supply" },
       { path: "/contact" },
     ],
+    // Prerender is disabled because it fails on Netlify (it looks for dist/server/server.js,
+    // but the Netlify Nitro preset outputs to .netlify/functions-internal/server/).
     prerender: {
-      enabled: true,
+      enabled: false,
       autoStaticPathsDiscovery: false,
     },
   },
